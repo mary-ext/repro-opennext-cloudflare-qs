@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:root {
+	--bg: #fff;
+	--fg: #171717;
+	--code-bg: #f0f0f0;
+	--result-bg: #1a1a2e;
+	--result-fg: #0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0a0a0a;
+		--fg: #ededed;
+		--code-bg: #1a1a2e;
+		--result-bg: #111;
+		--result-fg: #0f0;
+	}
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+	font-family: monospace;
+	padding: 2rem;
+	max-width: 800px;
+}
+
+pre {
+	background: var(--code-bg);
+	padding: 1rem;
+	overflow: auto;
+	border-radius: 4px;
+}
+
+pre.result {
+	background: var(--result-bg);
+	color: var(--result-fg);
+	margin-top: 1rem;
+}
+
+code {
+	background: var(--code-bg);
+	padding: 0.15em 0.3em;
+	border-radius: 3px;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	cursor: pointer;
+	background: var(--fg);
+	color: var(--bg);
+	border: none;
+	border-radius: 4px;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
